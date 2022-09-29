@@ -1,8 +1,14 @@
 {
-  "User": {
-  "id": { "string": {} },
-  "name": { "string": {} },
-  "email": { "string": {} },
-  "city": { "string": {} },
+  "Post": {
+    "title": { "string": {} },
+    "comments": {
+      "hasMany": "Comment"
+    }
+  },
+  "Comment": {
+    "body": { "string": {} },
+    "post": {
+      "belongsTo": "Post"
+    }
   }
 }
